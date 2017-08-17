@@ -29,7 +29,7 @@ var loaders = [
         //exclude: /node_modules/,
         query: {
             cacheDirectory: false,
-            presets: ["es2015", "stage-2"]
+            presets: ["es2017", "stage-2"]
         }
     },
     { test: /\.tsx?$/, loaders: ["ts-loader"] },

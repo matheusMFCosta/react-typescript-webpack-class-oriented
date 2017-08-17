@@ -23,6 +23,16 @@ var plugins = [
 
 var loaders = [
     { test: /\.tsx?$/, loaders: ["react-hot-loader"] },
+    {
+        test: /\.tsx?$/,
+        loader: "babel-loader",
+        //exclude: /node_modules/,
+        query: {
+            cacheDirectory: false,
+            babelrc: true,
+            presets: ["es2017", "stage-2"]
+        }
+    },
     { test: /\.tsx?$/, loaders: ["ts-loader"] },
     { test: /\.css$/, loader: "style-loader!css-loader" },
     { test: /\.json$/, loader: "json-loader" },

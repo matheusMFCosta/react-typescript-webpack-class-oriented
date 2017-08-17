@@ -11,6 +11,7 @@ class App extends React.Component<any, {}> {
     constructor(props, context) {
         super(props, context);
     }
+
     componentDidMount() {
         this.props.appInit(true);
     }

@@ -10,13 +10,13 @@ export class appInit implements Operation {
 
     constructor(public payload: boolean) {}
 
-    validate() {}
+    //validate() {}
 
     public Reduce(state: App): App {
         return assign(state, { init: this.payload });
     }
 
-    process() {}
+    //process() {}
 }
 
 export const appActions = {
