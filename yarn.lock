@@ -2663,19 +2663,6 @@ grunt-shell@^1.1.2:
     npm-run-path "^1.0.0"
     object-assign "^4.0.0"
 
-grunt-vtex@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/grunt-vtex/-/grunt-vtex-0.14.0.tgz#347294b2050e16090df3126e4104a373eb17fe4b"
-  dependencies:
-    color "^0.7.1"
-    connect "2.13.1"
-    connect-http-please "^0.1.1"
-    connect-livereload "~0.5.1"
-    connect-mock "~0.1.0"
-    connect-tryfiles "^0.2.1"
-    glob "^3.2.9"
-    request "^2.40.0"
-
 grunt-webpack@^1.0.11:
   version "1.0.18"
   resolved "https://registry.yarnpkg.com/grunt-webpack/-/grunt-webpack-1.0.18.tgz#ff26c43ff35bae6cca707a93c4bcdd950a3ecbb7"
