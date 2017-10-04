@@ -1,7 +1,7 @@
 import createLogic from "./../utils/createLogic";
-import { appActions } from "./../app/actions";
+import * as userMenu from "./../app/actions";
 
-const actionsArray = [...Object.values(appActions)];
+const actionsArray = [...Object.values(userMenu)];
 
 type createLogicType = {
     name: any;

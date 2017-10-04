@@ -1,0 +1,47 @@
+.panelHeading {
+    background-size: 50px;
+}
+
+.lockImage {
+    font-size: 45px;
+    color: #8181f7;
+    padding-left: 15px;
+}
+
+.arrowImage {
+    position: relative;
+    font-size: 25px;
+    color: #848484;
+    padding-right: 15px;
+    top: 10px;
+}
+
+.shieldIcon {
+    font-size: 55px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.peopleImage {
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.pad5top {
+    padding-top: 5px;
+}
+
+.divColor {
+    background: #323;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "jaf-bernino-sans-condensed", "Arial Narrow", sans-serif !important;
+    font-weight: lighter;
+    color: #344050;
+}
