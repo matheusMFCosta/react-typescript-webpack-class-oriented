@@ -1,9 +1,5 @@
 export abstract class Operation {
-    type?: string;
-    validate?: Function;
-    process?: Function;
-    Reduce?: Function;
-    payload?: any;
+    type: string = formatActionName(this.constructor.name);
 }
 
 type Partial<T> = { [P in keyof T]?: T[P] };

@@ -3,17 +3,21 @@ import { Button1, Button2, Button3, Form1, simpleExplanation } from "./app";
 
 //---------------- Simple Explanation -------------------//
 
-@actionTypeDecorator
-export class rawAction implements Operation {}
 
-@actionTypeDecorator
-export class payloadAction implements Operation {
-    constructor(public payload: string) {}
+
+export class rawAction extends Operation {}
+
+
+export class payloadAction extends Operation {
+    constructor(public payload: string) {
+        super()
+    }
 }
 
-@actionTypeDecorator
-export class changeReducerAction implements Operation {
-    constructor(public payload: string) {}
+export class changeReducerAction extends Operation {
+    constructor(public payload: string) {
+        super()
+    }
 
     public simpleExplanationReducer(state: simpleExplanation): simpleExplanation {
         return assign(state, { actionValue: this.payload });
@@ -21,18 +25,14 @@ export class changeReducerAction implements Operation {
 }
 
 //---------------- Toogle Buttons -------------------//
-@actionTypeDecorator
-export class toogleButton1 implements Operation {
-    public payload;
+export class toogleButton1 extends Operation {
 
     public button1Reducer(state: Button1): Button1 {
         return assign(state, { buttonStatus: !state.buttonStatus });
     }
 }
 
-@actionTypeDecorator
-export class toogleButton2 implements Operation {
-    public payload;
+export class toogleButton2 extends Operation {
 
     public button1Reducer(state: Button2): Button2 {
         return assign(state, { buttonStatus: !state.buttonStatus });
@@ -43,10 +43,7 @@ export class toogleButton2 implements Operation {
     }
 }
 
-@actionTypeDecorator
-export class toogleButton3 implements Operation {
-    public payload;
-
+export class toogleButton3 extends Operation {
     public button3Reducer(state: Button3): Button3 {
         return assign(state, { buttonStatus: !state.buttonStatus });
     }
@@ -59,9 +56,7 @@ export class toogleButton3 implements Operation {
     }
 }
 
-@actionTypeDecorator
-export class toogleButton3Success implements Operation {
-    public payload;
+export class toogleButton3Success extends Operation {
 
     public button3Reducer(state: Button3): Button3 {
         return assign(state, { buttonStatus: !state.buttonStatus });
@@ -70,18 +65,21 @@ export class toogleButton3Success implements Operation {
 
 //----------------------- FORM -----------------//
 
-@actionTypeDecorator
-export class changeInput implements Operation {
-    constructor(public payload: string) {}
+
+export class changeInput extends Operation {
+    constructor(public payload: string) {
+        super()
+    }
 
     public form1Reducer(state: Form1): Form1 {
         return assign(state, { inputvalue: this.payload });
     }
 }
 
-@actionTypeDecorator
-export class onForm1SaveButonPress implements Operation {
-    constructor(public payload: string) {}
+export class onForm1SaveButonPress extends Operation {
+    constructor(public payload: string) {
+        super()
+    }
 
     validate({ getState, action }, allow, reject) {
         if (action.payload.length >= 5) {
@@ -96,9 +94,7 @@ export class onForm1SaveButonPress implements Operation {
     }
 }
 
-@actionTypeDecorator
-export class onForm1SaveButonPressFailed implements Operation {
-    public payload;
+export class onForm1SaveButonPressFailed extends Operation {
 
     public form1Reducer(state: Form1): Form1 {
         return assign(state, { errorMessage: "Minimun 5 chars" });
